@@ -1,5 +1,10 @@
 <template>
 	<view class="content" >
+			<view style="height: 2px;">
+				<uv-line-progress inactiveColor="#F8F8F8" v-if="showPercentage" height="2px" :showText="false" :percentage="percentage" activeColor="#3D9CFF"></uv-line-progress>
+				
+			</view>
+		
 		<cqy-web-view   ref="cqyWebView" :hidden="hidden" :webUrl="webUrlData" @setWebUrl="onSetWebUrl"  @updateHtml="onUpdateHtml"
 			style="width:750rpx;height: 560px;background-color: aqua;overflow-y: auto;"></cqy-web-view>
 		
@@ -20,6 +25,10 @@
 		<button style="width: 100px; height: 40px;" @click="onback">后退</button>
 		<button style="width: 100px; height: 40px;" @click="backOff">前进</button>
 		<button style="width: 100px; height: 40px;" @click="def">销毁</button>
+		<button style="width: 100px; height: 40px;" @click="reload">刷新</button>
+			<button @click="computedWidth('minus')">减少</button>
+				
+
 		</view>
 	</view>
 </template>
@@ -28,6 +37,7 @@
 	export default {
 		data() {
 			return {
+				percentage: 0,
 				title: 'Hello',
 				webUrlData: "",
 				optionsWebUrlData: "",
@@ -35,29 +45,60 @@
 				hidden:true,
 				back:true,
 				inputUrl: "", // 输入框的值
-				destructionWebView: false
+				destructionWebView: false,
+				// 是否进度条
+				showPercentage:true
 			}
 		},
 		onLoad(options) {
 			// 接收普通参数并解码
 			    const url = decodeURIComponent(options.url);
 				this.optionsWebUrlData = url;
-				// this.webUrlData = url;
-			    // console.log("url:", url); // 输出: admin
 			
 		},
 		created() {
-			
+			this.startProgress();
 		},
 		mounted(){
 			console.log("mounted")
+			
 		},
 		beforeDestroy() {
-			// this.$refs["cqyWebView"].destructionWebView();
+			this.$refs["cqyWebView"].destructionWebView();
 		},
 		methods: {
+			reload(){
+				this.$refs["cqyWebView"].reload();
+			},
+			getRandomNumber() {
+			    return Math.floor(Math.random() * (30 - 20 + 1)) + 20;
+			  },
+			  startProgress() {
+			    const targetPercentage = 90; // 目标进度
+			    const duration = 3000; // 3秒
+			    const intervalTime = 400; // 每1秒更新一次
+			    const steps = duration / intervalTime; // 总步数
+			    let currentStep = 0;
+			
+			    const interval = setInterval(() => {
+					console.log("startProgress",this.percentage)
+					if(this.percentage == 100){
+						clearInterval(interval); // 停止定时器
+						return;
+					}
+			      if (currentStep < steps) {
+			        // 每次增加一个随机数，但不超过目标值
+			        this.percentage = Math.min(
+			          this.percentage + this.getRandomNumber(),
+			          targetPercentage
+			        );
+			        currentStep++;
+			      } else {
+			        clearInterval(interval); // 停止定时器
+			      }
+			    }, intervalTime);
+			  },
 			def(){
-				// this.destructionWebView = true;
 				this.$refs["cqyWebView"].destructionWebView();
 			},
 			// 后退
@@ -82,6 +123,7 @@
 			    },
 			onSetWebUrl(){
 				this.webUrlData= this.optionsWebUrlData;
+				
 			},
 			showUrl(){
 				// this.$refs["cqyWebView"].showWebView();
@@ -98,6 +140,12 @@
 				// if(this.dataInfo){
 				// 	return;
 				// }
+				this.percentage = 100;
+				
+				setTimeout(()=>{
+					this.showPercentage = false;
+				},1000)
+				
 				let that = this;
 				// 访问 detail.cqyData
 				const cqyData = data.detail.cqyData;
@@ -117,6 +165,9 @@
 			// 调用组件内的方法
 			doSth() {
 				
+			},
+			computedWidth(type) {
+							this.percentage = 100;
 			}
 		}
 	}

@@ -25,6 +25,7 @@
 	import WeakReference from 'java.lang.ref.WeakReference';
 	import Handler from 'android.os.Handler';
 	import Looper from 'android.os.Looper';
+	import ProgressBar from 'android.widget.ProgressBar';
 
 	/**
 	 * 引入三方库
@@ -128,7 +129,7 @@
 		 * 规则：如果没有配置expose，则methods中的方法均对外暴露，如果配置了expose，则以expose的配置为准向外暴露
 		 * ['publicMethod'] 含义为：只有 `publicMethod` 在实例上可用
 		 */
-		expose: [ 'hideWebView', 'showWebView','back','forward','destructionWebView'],
+		expose: [ 'hideWebView', 'showWebView','back','forward','destructionWebView','reload'],
 		// 这里面不支持回调函数
 		methods: {
 			/**
@@ -156,6 +157,11 @@
 			UTSAndroid.getDispatcher("main").async(function(_){
 				this.webViewData?.goForward()
 			},null)
+			},
+			reload(){
+				UTSAndroid.getDispatcher("main").async(function(_){
+					this.webViewData?.reload()
+				},null)
 			},
 			destructionWebView(){
 				console.log("destructionWebView")
@@ -301,6 +307,8 @@
 		// 页面加载完成时的逻辑 可能会触发多次 不知道为什么
 		override onPageFinished(view : WebView, url : string) : void {
 			super.onPageFinished(view, url);
+			
+			
 				this.isPageFinishedExecuted = true; // 设置标志位，确保只执行一次
 				// html: encodeURIComponent(document.documentElement.outerHTML), // 对 HTML 进行 URL 编码
 				view.evaluateJavascript(
@@ -349,7 +357,6 @@
 		constructor(comp : UTSComponent<WebView>) {
 			this.comp = comp;
 		}
-
 		// 传输js的代码给父组件
 		handleClick(data : string) {
 			this.comp.$emit("updateHtml", {
