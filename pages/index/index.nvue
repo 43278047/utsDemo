@@ -1,0 +1,102 @@
+<template>
+	<view class="content" >
+		<cqy-web-view   ref="cqyWebView" :hidden="hidden" :webUrl="webUrlData" @setWebUrl="onSetWebUrl"  @updateHtml="onUpdateHtml"
+			style="width:750rpx;height: 560px;background-color: aqua;"></cqy-web-view>
+		
+		<!-- 输入框和按钮 -->
+		    <view class="input-container">
+		      <input
+		        v-model="inputUrl"
+		        placeholder="请输入新的 URL"
+		        class="input-box"
+		      />
+		      <button @click="updateUrlWithInput" class="update-button">修改 URL</button>
+		    </view>
+		
+		
+		<button @click="updateUrl">修改url</button>
+		<button @click="showUrl">显示url</button>
+		<button @click="hideUrl">隐藏url</button>
+		
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				title: 'Hello',
+				webUrlData: "",
+				dataInfo:null,
+				hidden:true,
+				inputUrl: "", // 输入框的值
+			}
+		},
+		onLoad() {
+		},
+		created() {
+			
+		},
+		mounted(){
+			console.log("mounted")
+		},
+		methods: {
+			// 通过输入框更新 URL
+			    updateUrlWithInput() {
+			      if (this.inputUrl) {
+			        this.webUrlData = this.inputUrl; // 更新 WebView 的 URL
+			        this.inputUrl = ""; // 清空输入框
+			      } else {
+			        uni.showToast({
+			          title: "请输入有效的 URL",
+			          icon: "none",
+			        });
+			      }
+			    },
+			onSetWebUrl(){
+				this.webUrlData= "https://doc.dcloud.net.cn/uni-app-x/plugin/uts-component-compatible.html";
+			},
+			showUrl(){
+				// this.$refs["cqyWebView"].showWebView();
+				this.hidden = true;
+			},
+			hideUrl(){
+				// this.$refs["cqyWebView"].hideWebView();
+				this.hidden = false;
+			},
+			onButtonClick(data) {
+				
+			},
+			onUpdateHtml(data) {
+				if(this.dataInfo){
+					return;
+				}
+				let that = this;
+				// 访问 detail.cqyData
+				const cqyData = data.detail.cqyData;
+				// console.log("cqyDatacqyDatacqyDatacqyDatacqyDatacqyDatacqyDatacqyDatacqyData  "+cqyData); // 输出对象的键
+				// console.log("cqyDatacqyDatacqyDatacqyDatacqyDatacqyDatacqyDatacqyDatacqyData  "+JSON.parse(cqyData)); // 输出对象的键
+				// console.log("cqyDatacqyDatacqyDatacqyDatacqyDatacqyDatacqyDatacqyDatacqyData  "+JSON.parse(cqyData).host); // 输出对象的键
+				let dataInfo = JSON.parse(cqyData)
+				this.dataInfo = dataInfo;
+				// console.log("dataInfo="+this.dataInfo)
+				// console.log("dataInfo="+this.dataInfo)
+				console.log("dataInfo="+that.dataInfo.title)
+				uni.showToast({
+					title: that.dataInfo.title
+				})
+			},
+			updateUrl() {
+				this.webUrlData = "https://juejin.cn/post/7457570392675106851";
+			},
+			// 调用组件内的方法
+			doSth() {
+				
+			}
+		}
+	}
+</script>
+
+<style>
+
+</style>

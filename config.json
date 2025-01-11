@@ -1,0 +1,28 @@
+{
+  "android": {
+    "abiFilters": [
+      "arm64-v8a"
+    ],
+    "appName": "utsDemo",
+    "manifestPlaceholders": {
+      "dcloud_appkey": "6029ea87826ae9079195575f04a35c52"
+    },
+    "packageName": "com.uts.www",
+    "signingConfig": {
+      "keyAlias": "__uni__83ad3fd",
+      "keyPassword": "0tYUi7CW",
+      "storeFile": "/Users/wanghao/Desktop/藏趣云/93b77a5fdd75a3df6dbb7fbdf2cd28ed.keystore",
+      "storePassword": "0tYUi7CW"
+    }
+  },
+  "ios": {
+    "plist": {},
+    "signingConfig": {
+      "development": {},
+      "release": {}
+    }
+  },
+  "uniSdk": {
+    "android": "/Users/wanghao/java资料/Android-SDK@4.43.82331_20241225"
+  }
+}
