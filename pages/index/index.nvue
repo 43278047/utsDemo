@@ -2,11 +2,15 @@
 	<view class="content" >
 			<view style="height: 2px;">
 				<uv-line-progress inactiveColor="#F8F8F8" v-if="showPercentage" height="2px" :showText="false" :percentage="percentage" activeColor="#3D9CFF"></uv-line-progress>
-				
 			</view>
 		
-		<cqy-web-view   ref="cqyWebView" :hidden="hidden" :webUrl="webUrlData" @setWebUrl="onSetWebUrl"  @updateHtml="onUpdateHtml"
+		<cqy-web-view  ref="cqyWebView"  :hidden="hidden" :webUrl="webUrlData" @setWebUrl="onSetWebUrl"  @updateHtml="onUpdateHtml"
 			style="width:750rpx;height: 560px;background-color: aqua;overflow-y: auto;"></cqy-web-view>
+		
+		<view v-if="!hidden" style="width:750rpx;height: 560px;background-color: aqua;overflow-y: auto;">
+			asdasdasdasdas
+		</view>
+		
 		
 		<!-- 输入框和按钮 -->
 		    <view class="input-container">
@@ -26,7 +30,8 @@
 		<button style="width: 100px; height: 40px;" @click="backOff">前进</button>
 		<button style="width: 100px; height: 40px;" @click="def">销毁</button>
 		<button style="width: 100px; height: 40px;" @click="reload">刷新</button>
-			<button @click="computedWidth('minus')">减少</button>
+		<button style="width: 100px; height: 40px;" @click="showView">显示</button>
+		<button style="width: 100px; height: 40px;" @click="hideView">隐藏</button>
 				
 
 		</view>
@@ -47,7 +52,7 @@
 				inputUrl: "", // 输入框的值
 				destructionWebView: false,
 				// 是否进度条
-				showPercentage:true
+				showPercentage:true,
 			}
 		},
 		onLoad(options) {
@@ -67,6 +72,7 @@
 			this.$refs["cqyWebView"].destructionWebView();
 		},
 		methods: {
+			
 			reload(){
 				this.$refs["cqyWebView"].reload();
 			},

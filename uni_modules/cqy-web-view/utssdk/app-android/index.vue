@@ -67,17 +67,6 @@
 			"hidden": {
 				type: Boolean,
 				default: true
-			},
-			/**
-			 * 前进或者后退的方法
-			 */
-			"back":{
-				type: Boolean,
-				default: true
-			},
-			"destructionWebView":{
-				type: Boolean,
-				default: true
 			}
 		},
 		/**
@@ -255,6 +244,9 @@
 		 */
 		unmounted() {
 			console.log("unmounted")
+			UTSAndroid.getDispatcher("main").async(function(_){
+				this.webViewData?.destroy();
+			},null)
 		},
 		/**
 		 * [可选实现] 自定组件布局尺寸，用于告诉排版系统，组件自身需要的宽高
