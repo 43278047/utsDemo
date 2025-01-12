@@ -1,8 +1,0 @@
-{
-  "components": [
-    {
-      "name": "cqy-web-view",
-      "class": "uts.sdk.modules.cqyWebView.CqyWebViewComponent"
-    }
-  ]
-}

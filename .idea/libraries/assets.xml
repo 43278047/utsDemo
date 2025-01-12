@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="assets">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/uni-jsframework.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/uni-jsframework-vue3-dev.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/supplierconfig.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/dcloud_uniplugins.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/uni-jsframework-vue3.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/uni-jsframework-dev.js.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

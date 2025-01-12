@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="fonts">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/fonts/dcloud_iconfont.ttf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/fonts/unincomponents.ttf.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

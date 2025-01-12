@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="desugarDebugFileDependencies">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/external_file_lib_dex_archives/debug/desugarDebugFileDependencies/4_jetified-oaid_sdk_1.0.25-runtime.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/external_file_lib_dex_archives/debug/desugarDebugFileDependencies/2_jetified-uniapp-v8-release-runtime.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/external_file_lib_dex_archives/debug/desugarDebugFileDependencies/3_jetified-android-gif-drawable-1.2.28-runtime.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/external_file_lib_dex_archives/debug/desugarDebugFileDependencies/6_jetified-breakpad-build-release-runtime.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/external_file_lib_dex_archives/debug/desugarDebugFileDependencies/1_jetified-lib.5plus.base-release-runtime.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/external_file_lib_dex_archives/debug/desugarDebugFileDependencies/5_jetified-utsplugin-release-runtime.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/external_file_lib_dex_archives/debug/desugarDebugFileDependencies/0_jetified-debug-server-release-runtime.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

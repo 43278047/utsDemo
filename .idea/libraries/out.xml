@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="out">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/project_dex_archive/debug/dexBuilderDebug/out/9e8f83ebff3d4ba1a4c09919f13e3ef2bc221a13254ff10ebe906f1a41af5bd3_0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/project_dex_archive/debug/dexBuilderDebug/out/9e8f83ebff3d4ba1a4c09919f13e3ef2bc221a13254ff10ebe906f1a41af5bd3_1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/project_dex_archive/debug/dexBuilderDebug/out/9e8f83ebff3d4ba1a4c09919f13e3ef2bc221a13254ff10ebe906f1a41af5bd3_3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/project_dex_archive/debug/dexBuilderDebug/out/9e8f83ebff3d4ba1a4c09919f13e3ef2bc221a13254ff10ebe906f1a41af5bd3_2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

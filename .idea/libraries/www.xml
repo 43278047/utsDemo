@@ -1,0 +1,25 @@
+<component name="libraryTable">
+  <library name="www">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/__uniappsuccess.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/__uniappview.html.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/view.css.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/app-service.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/__uniappopenlocation.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/__uniapppicker.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/app-config-service.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/manifest.json.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/__uniappquillimageresize.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/__uniappscan.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/__uniappes6.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/__uniappchooselocation.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/app-view.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/__uniappquill.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/view.umd.min.js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/__uniapperror.png.jar!/" />
+      <root url="jar://$PROJECT_DIR$/android/gradle-build/app/intermediates/compressed_assets/debug/compressDebugAssets/out/assets/apps/__UNI__83AD3FD/www/app-config.js.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
